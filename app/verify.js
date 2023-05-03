@@ -1,12 +1,13 @@
 const main = document.querySelector("main")
 const p = main.querySelector("p");
 
-function verifyNumber(number, input) {
+function verifyNumber(number, input, tryNumber) {
     if (input === number) {
         main.innerHTML = `
         <h1>Você Ganhou</h1>
         <h2>O número era ${number}</h2>
         <button class="button-36">Jogar Novamente</button>
+        <p>Você tentou ${tryNumber}x</p>
         `;
         const restart = document.querySelector(".button-36");
         restart.addEventListener("click", () => {
